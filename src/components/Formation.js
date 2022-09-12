@@ -3,6 +3,7 @@ import Card from "./Card";
 import axios from "axios"
 
 
+
 class Formation extends Component{
 
     constructor(){
@@ -25,16 +26,33 @@ class Formation extends Component{
         )
     }
 
+    
+    
+
     render(){
 
-       
+        
+        
+        const listData = this.state.data.map((info,index)=>{
+            return <Card 
+                            key={index} 
+                            fullName={info.title} 
+                            email="youssefmennnni1966@gmail.com" 
+                            adresse="lot alami 41 res maamoura" 
+                            imgId={index}
+                            />
+                        }
+                        )
         
         return(
             
-                     
-            this.state.data.map((info,index)=>{
-                return <Card key={index} fullName={info.title} email="youssefmennnni1966@gmail.com" adresse="lot alami 41 res maamoura" />
-            }) 
+                     <div>
+                        <a className='btn btn-warning' href="/addFormation">Add Poste</a>
+                        <div className='row'>
+                        { listData }
+                        </div>
+                     </div>
+             
 
             /*<div className="row">
             <Card fullName="youssef Mennani" email="youssefmennnni1966@gmail.com" adresse="lot alami 41 res maamoura" />

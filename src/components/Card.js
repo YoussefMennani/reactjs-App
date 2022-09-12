@@ -10,11 +10,12 @@ class Card extends Component{
             <div className="col-md-3 col-sm-6 ">
             <div className="card my-2">
                 <div className="card-header">
-                    <img className="card-img-top" src="https://picsum.photos/50" alt="Card image cap" style={{maxWidth:"100%"}} />
+                    <img className="card-img-top" src={`https://picsum.photos/${this.props.imgId+20}`} alt="Card image cap" style={{maxWidth:"100%"}} />
                 </div>
                 <div className="card-body">
                     <ul className="list-group">
-                        <li className="list-group-item text-truncate"> <span className="badge bg-primary">Full Name : </span> { this.props.fullName }</li>
+                    
+                        <li className="list-group-item text-truncate"> <span className="badge bg-primary"> {this.props.imgId}Full Name : </span> { this.props.fullName }</li>
                         <li className="list-group-item text-truncate"> <span className="badge bg-danger">Email :</span> { this.props.email }</li>
                         <li className="list-group-item text-truncate"><span className="badge bg-warning">Adresse : </span> { this.props.adresse }</li>
                     </ul>
