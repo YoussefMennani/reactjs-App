@@ -45,16 +45,18 @@ class AddFormation extends Component{
 
         if(value.length > 0){
             this.setState({[inpName]:{
+                ...this.state.inpName,
                 isValid:true,
-                msg:`${inpName} is Valide`,
-                ...this.state.inpName
+                msg:`${inpName} is Valide`
+                
             }}) 
             
         }else{
             this.setState({[inpName]:{
+                ...this.state.inpName,
                 isValid:false,
-                msg:`${inpName} is inValide`,
-                ...this.state.inpName
+                msg:`${inpName} is inValide`
+                
             }}) 
         }
 

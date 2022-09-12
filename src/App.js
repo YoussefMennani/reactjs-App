@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import About from './components/About';
 import AddFormation from './components/addFormation';
+import YupPage from './components/YupPage';
 
 
 
@@ -31,6 +32,11 @@ function App() {
               <li className="nav-item">
                 <Link to="/About" className="nav-link">About</Link>
               </li>
+
+              <li className="nav-item">
+                <Link to="/yuppage" className="nav-link">Yup page</Link>
+              </li>
+
             
             </ul>
           </div>
@@ -42,6 +48,7 @@ function App() {
             <Route path="/Formation" element={<Formation />} />
             <Route path="/About" element={<About />} />
             <Route path="/addFormation" element={<AddFormation />} />
+            <Route path="/yuppage" element={<YupPage />} />
           </Routes>
         </BrowserRouter>
 
